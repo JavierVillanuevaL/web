@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Pagina web</title>
+    <style>
+        body{
+            background-color: rgb(215, 222, 251);
+            box-sizing: border-box;
+        }
+        .cab{
+            width: 100%;
+            height: 100px;
+            border: 1px solid gray;
+            background: #3586ff;
+
+        }
+        /* @media (max-width: 400px){
+            body {
+            max-height: none;
+            max-width: none;
+            min-width: 300px;
+            }
+            head{
+                max-height: none;
+                max-width: none;
+                min-width: 320px;
+            }
+        } */
+
+        .ps5{
+            width: 250px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+        }
+        .imagen{
+            width: 200px;
+            height: 200px;
+        }
+        .bloquejuegos1{
+            display: flex;
+            overflow-x: scroll;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .psportal{
+            width: 250px;
+            display: flex;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        .navv{
+            border: 2px solid black;
+            width: 100%;
+            height: 50px;
+            background-color:rgb(23, 23, 22);
+            font-weight: bold;
+            text-align: center;
+            flex-direction: row;
+        }
+        .navv a{
+            text-decoration: none;
+            /* margin-left: 190px; */
+        }
+        .navv a:hover{
+            padding: 10px;
+            color: white;
+            background: #3586ff;
+        }
+        .nav-item-dropdown{
+            /* margin: 12px; */
+            margin-left: 12%;
+            padding-top: 10px;
+            padding-bottom: 25px;
+            margin-right: 10%;
+            text-align: center;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+        .footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 130px;
+        padding: 40px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 170px;
+        }
+
+        .social-icon,
+        .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+        }
+
+        .social-icon__item,
+        .menu__item {
+        list-style: none;
+        }
+
+        .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        }
+        .social-icon__link:hover {
+        transform: translateY(-10px);
+        }
+
+        .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+        }
+
+        .menu__link:hover {
+        opacity: 1;
+        }
+
+        .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+        }
+
+        .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+        }
+
+        .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+        }
+
+        .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+        }
+
+        .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+        }
+
+        .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+        }
+
+        @keyframes animateWaves {
+        0% {
+            background-position-x: 1000px;
+        }
+        100% {
+            background-positon-x: 0px;
+        }
+        }
+
+        @keyframes animate {
+        0% {
+            background-position-x: -1000px;
+        }
+        100% {
+            background-positon-x: 0px;
+        }
+        }
+        
+        .carrusel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 10px;
+        }
+    
+        .carrusel {
+            display: flex;
+            transition: transform 1.5s ease-in-out;
+            animation-name: moverimg;
+            animation-duration: 20s;
+        }
+        /* .carrusel span{
+            padding: 50px;
+
+            border: solid 1px black;
+        } */
+        /* .spans{
+            border: solid 1px rgb(220, 210, 210);
+        } */
+        .imgc1 {
+            width: 100%;
+            margin-left: 50px;
+        }
+        .imgc2{
+            width: 90%;
+            padding-left: 130px;
+        }
+        .imgc3{
+            width: 100%;
+            padding-left: 250px;
+        }
+        .imgc4{
+            width: 100%;
+            padding-left: 250px;
+        }
+        .imgc5{
+            width: 100%;
+            padding-left: 250px;
+        }
+        .imgc6{
+            width: 100%;
+            padding-left: 200px;
+        }
+        .btn-anterior,
+        .btn-siguiente {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #3586ff;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .btn-anterior:hover,
+        .btn-siguiente:hover {
+            background-color: rgb(206, 203, 203);
+        }
+        .btn-anterior {
+            left: 10px;
+        }
+        
+        .btn-siguiente {
+            right: 17px;
+        }
+        @media (min-width: 1300px){
+            .carrusel-container {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                margin: 20px;
+            }
+    
+            .carrusel {
+                display: flex;
+                transition: transform 1.5s ease-in-out;
+                animation-name: moverimg;
+                animation-duration: 20s;
+            }
+
+            .imgc1 {
+                width: 100%;
+                margin-left: 200px;
+            }
+            .imgc2{
+                width: 100%;
+                padding-left: 500px;
+            }
+            .imgc3{
+                width: 100%;
+                padding-left: 530px;
+            }
+            .imgc4{
+                width: 100%;
+                padding-left: 520px;
+            }
+            .imgc5{
+                width: 100%;
+                padding-left: 520px;
+            }
+            .imgc6{
+                width: 100%;
+                padding-left: 200px;
+            }
+            .btn-anterior,
+            .btn-siguiente {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #3586ff;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .btn-anterior:hover,
+            .btn-siguiente:hover {
+                background-color: rgb(206, 203, 203);
+            }
+            .btn-anterior {
+                left: 100px;
+            }
+            
+            .btn-siguiente {
+                right: 200px;
+            }
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .menu-icon {
+                display: block;
+                color: #3586ff;
+                float: right;
+                padding: 15px;
+                cursor: pointer;
+                margin-right: 30px;
+            }
+                
+            #menu {
+                display: none;
+                clear: both;
+            }
+            
+            #menu.active {
+                display: block;
+                background-color: rgb(28, 29, 28);
+                width: 40%;
+                float: right;
+            }
+            
+            #menu li {
+                float: none;
+            }
+
+            .ps5{
+                width: 50%;
+            }
+            .ps5 img{
+                width: 60%;
+            }
+            .carrusel-container {
+                position: relative;
+                overflow: hidden;
+                width: 60%;
+                margin: 10px;
+            }
+    
+            .carrusel {
+                display: flex;
+                transition: transform 1.5s ease-in-out;
+                animation-name: moverimg;
+                animation-duration: 20s;
+            }
+
+            .imgc1 {
+                width: 100%;
+                margin-left: 100px;
+            }
+            .imgc2{
+                width: 96%;
+                padding-left: 310px;
+            }
+            .imgc3{
+                width: 100%;
+                padding-left: 250px;
+            }
+            .imgc4{
+                width: 100%;
+                padding-left: 250px;
+            }
+            .imgc5{
+                width: 100%;
+                padding-left: 250px;
+            }
+            .imgc6{
+                width: 100%;
+                padding-left: 200px;
+            }
+            .btn-anterior,
+            .btn-siguiente {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #3586ff;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .btn-anterior:hover,
+            .btn-siguiente:hover {
+                background-color: rgb(206, 203, 203);
+            }
+            .btn-anterior {
+                left: 10px;
+            }
+            
+            .btn-siguiente {
+                right: 17px;
+            }
+            form{
+                width: 30%;
+            }
+            form input{
+                width: 40%;
+            }
+            form textarea{
+                width: 80%;
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            top: 700px; /* Ajusta la distancia desde el borde inferior */
+            transform: translateX(-50%);
+            max-width: 60%; /* Limita el ancho máximo */
+            max-height: 17%;
+            background-color: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .modal-contenido {
+            background-color: #fefefe;
+            opacity: .8;
+            padding: 1px 10px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .modal-contenido h2 {
+            margin: 0;
+        }
+
+        .modal-contenido button {
+            margin-top: 0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .modal-contenido button:hover {
+            background-color: #ddd;
+        }
+
+        footer a{
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cab">
+            <a href="index.html"><img src="imagenes/logo.jpg" width="80px" align="left" style="margin-left: 20px; margin-top: 10px;"></a>
+            
+            <form align="right" style="margin-top: 2%;">
+                <input type="search" placeholder="Buscar">
+                <button type="submit"><img src="imagenes/lupa.jpg" width="40px"></button>
+                <button class="carr"><a href=""><img src="imagenes/carrito.jpg" width="36px"></a></button></form>
+        </div>
+    </header>
+
+    <nav class="navv">
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav nav-tabs" id="menu">
+            <li class="nav-item-dropdown">
+                <a class="nav-link-dropdown-toggle" data-toggle="dropdown" href="">VIDEOJUEGOS | CONSOLAS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pagina play4.html">Playstation 4</a>
+                    <a class="dropdown-item" href="pagina play5.html">Playstation 5</a>
+                    <a class="dropdown-item" href="pagina xbox.html">Xbox series X</a>
+                    <a class="dropdown-item" href="pagina nintendo.html">Nintendo Switch</a>
+                </div>
+            </li>
+            <li class="nav-item-dropdown">
+                <a class="nav-link-dropdown-toggle" data-toggle="dropdown" href="">ACCESORIOS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pagina accesorios play4.html">PlayStation 4</a>
+                    <a class="dropdown-item" href="pagina accesorios play5.html">Playstation 5</a>
+                    <a class="dropdown-item" href="pagina accesorios xbox.html">Xbox</a>
+                    <a class="dropdown-item" href="pagina accesorios nintendo.html">Nintendo</a>
+                </div>
+            </li>
+            <li class="nav-item-dropdown">
+                <a class="nav-link-dropdown-toggle" href="pagina digital.html">DIGITAL</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="carrusel-container">
+            <div class="carrusel">
+            <a href="https://www.game.es/VIDEOJUEGOS/ROL/PLAYSTATION-5/FINAL-FANTASY-VII-REBIRTH/223029" class="imgc1" target="_blank"><img src="imagenes/ff7 img grande.jpg" alt="Imagen 1"></a>
+            <a href="https://www.game.es/buscar/skus/P05002,224806,226936" class="imgc2"target="_blank"><img src="imagenes/img ps5 tlof2.jpg" alt="Imagen 2"></a>
+            <a href="https://www.game.es/tiendas" class="imgc3"target="_blank"><img src="imagenes/img grande ps5.jpg" alt="Imagen 2"></a>
+            <a href="https://www.game.es/HARDWARE/CONSOLA/XBOX-SERIES-X/XBOX-SERIES-X/182899" class="imgc4" target="_blank"><img src="imagenes/img grande xbox sx.jpg" alt="Imagen 3"></a>
+            <a href="https://www.game.es/VIDEOJUEGOS/AVENTURA/NINTENDO-SWITCH/MARIO-VS-DONKEY-KONG/223002" class="imgc5" target="_blank"><img src="imagenes/img grande mario dk switch.jpg" alt="Imagen 4"></a>
+            </div>
+            <!-- <table class="spans"><td>FF7</td><td>FF7</td><span>Xbox Series X</span><span>FF7</span><span>FF7</span><span>Xbox Series X</span></table> -->
+            <button class="btn-anterior">◄</button>
+            <button class="btn-siguiente">►</button>
+        </div>
+        <br>
+    
+        <a href="https://www.game.es/OFERTAS/PACK/PACKS/EA-SPORTS-FC-24-REGALO-TARJETA-PREPAGO-PSN-10%E2%82%AC/P04842" target="_blank"><img src="imagenes/promo ea sports fc.jpg" width="100%"></a>
+        <br>
+        <br>
+        <h2 style="margin: 30px;">Lo más buscado</h2>
+        <ul>
+            <div class="bloquejuegos1">
+                <div class="ps5"><a href="https://www.game.es/OFERTAS/PACK/PACKS/EA-SPORTS-FC-24-REGALO-TARJETA-PREPAGO-PSN-10%e2%82%ac/P04842" target="_blank">
+                    <img class="imagen" src="imagenes/ea sports.jpg">
+                    <h4>Ea Sports FC 24</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/VIDEOJUEGOS/ROL/PLAYSTATION-5/FINAL-FANTASY-VII-REBIRTH/223029" target="_blank">
+                    <img class="imagen" src="imagenes/ff7.jpg">
+                    <h4>Final Fantasy VII Rebirth</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/VIDEOJUEGOS/DEPORTES/PLAYSTATION-5/NBA-2K24-KOBE-BRYANT-EDITION/220858" target="_blank">
+                    <img class="imagen" src="imagenes/nba.jpg">
+                    <h4>NBA2k24</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/VIDEOJUEGOS/ACCION/PLAYSTATION-5/MARVELS-SPIDER-MAN-2/218764" target="_blank">
+                    <img class="imagen" src="imagenes/spiderman.jpg">
+                    <h4>Spiderman 2</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+            
+                <div class="ps5"><a href="https://www.game.es/VIDEOJUEGOS/ROL/XBOX-SERIES-X/STARFIELD/219393" target="_blank">
+                    <img class="imagen" src="imagenes/starfield.jpg">
+                    <h4>Starfield</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/VIDEOJUEGOS/AVENTURA/PLAYSTATION-5/THE-LAST-OF-US-PARTE-I/205516" target="_blank">
+                    <img class="imagen" src="imagenes/the last of us.jpg">
+                    <h4>The last of us parte 1</h4>
+                    Comprar:
+                    <b>69.99€</b></a>
+                </div>
+                <div class="ps5"><a href="">
+                    <img class="imagen" src="">
+                    <h4>The last of us Parte 2 Remastered</h4>
+                    Comprar:
+                    <b>49.99€</b></a>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="bloquejuegos1">
+                <div class="ps5"><a href="https://www.game.es/HARDWARE/CONSOLA/PLAYSTATION-5/PLAYSTATION-5-CHASSIS-C/212393" target="_blank">
+                    <img class="imagen" src="imagenes/ps5 imagen.jpg">
+                    <h4>Consola PS5</h4>
+                    Comprar:
+                    <b>549.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/HARDWARE/PACK-CONSOLA/PLAYSTATION-5/PS5-STANDARD-EDITION-MARVELS-SPIDER-MAN-2-VOUCHER/223793" target="_blank">
+                    <img class="imagen" src="imagenes/ps5+spiderman.jpg">
+                    <h4>PS5 Standart Edition + Spiderman 2</h4>
+                    Comprar:
+                    <b>619.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/HARDWARE/CONSOLA/XBOX-SERIES-X/XBOX-SERIES-X/182899" target="_blank">
+                    <img class="imagen" src="imagenes/xbox sx.jpg">
+                    <h4>Xbox Series X</h4>
+                    Comprar:
+                    <b>479.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/OFERTAS/PACK/PACKS/NINTENDO-SWITCH-A-ELEGIR-SUPER-MARIO-ODYSSEY/P04853" target="_blank">
+                    <img class="imagen" src="imagenes/switch+ odysey.png">
+                    <h4>Nintendo Switch + SuperMario Odysey</h4>
+                    Comprar:
+                    <b>319.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/OFERTAS/PACK/PACKS/NINTENDO-SWITCH-A-ELEGIR-SUPER-MARIO-ODYSSEY/P04853" target="_blank">
+                    <img class="imagen" src="">
+                    <h4>PS5 Digital Edition</h4>
+                    Comprar:
+                    <b>319.99€</b></a>
+                </div>
+                <div class="ps5"><a href="https://www.game.es/HARDWARE/CONSOLA/XBOX-SERIES-X/XBOX-SERIES-S/182900" target="_blank">
+                    <img class="imagen" src="imagenes/xbox ss.jpg">
+                    <h4>Xbox Series S</h4>
+                    Comprar:
+                    <b>229.99€</b></a>
+                </div>
+            </div>
+        
+            <br>
+            <a href="https://www.game.es/buscar/AllAccess" target="_blank"><img src="imagenes/promoxbox.jpg" width="100%"></a>
+
+            <br><br>
+
+            <h4 style="margin-left: 30px;">Proximos lanzamientos</h4>
+            <div class="bloquejuegos1">
+                <div class="ps5"><a href="" target="_blank">
+                    <img class="imagen" src="imagenes/">
+                    <h4>Rise of the Ronin</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+                <div class="ps5"><a href="" target="_blank">
+                    <img class="imagen" src="imagenes/">
+                    <h4>Dragon´s Dogma 2</h4>
+                    Comprar:
+                    <b>79.99€</b></a>
+                </div>
+            </div>
+        
+        <br><br>
+        
+        <a href="pagina play5.html" style="margin-left: 25px; padding: 10px;"><img src="https://media.game.es/CMS/Banners/Small/mult-GAMEmasquevideojuegos-playstation5-s3023-p.jpg" width="30%"></a>
+        <a href="pagina play4.html" style="padding: 10px;"><img src="https://media.game.es/CMS/Banners/Small/mult-GAMEmasquevideojuegos-playstation4-s3023-p.jpg" width="30%"></a>
+        <a href="pagina nintendo.html"style="padding: 10px;"><img src="https://media.game.es/CMS/Banners/Small/mult-GAMEmasquevideojuegos-nintendoswitch-s3023-p.jpg" width="30%"></a>
+        <br>
+        <br>
+        <a href="pagina xbox.html" style="margin-left: 25px; padding: 10px;"><img src="https://media.game.es/CMS/Banners/Small/mult-GAMEmasquevideojuegos-xboxseries-s3023-p.jpg" width="30%"></a></ul>
+
+        <form action="https://formsubmit.co/javivillanueva2001@gmail.com" method="POST" style="margin: 70px; width: 40%;">
+            <fieldset style="border: 2px solid black; padding: 50px;">
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre: </label><input type="text" name="nombre"><br>
+                <label for="apel">Apellidos: </label><input type="text" name="apel"><br>
+                <label for="telf">Telefono</label><input type="tel" name="telf"><br>
+                <label for="correo">Correo electronico: </label><input type="email" name="correo"><br>
+                <label for="mensaje">Mensaje</label><br><textarea name="mensaje" id="mensaje" cols="30" rows="7"></textarea>
+            
+                <br>
+                <input type="submit" style="margin-top: 40px; margin-left: 20px; margin-right: 20px;"><!-- por defecto pone enviar si no le pones nada ni value-->
+                <input type="reset">
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="index.html">Inicio</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Sobre mi</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Servicios</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
+        </ul>
+        <a href="politica_priv.html">Politicas de Privacidad</a><a href="politica_cookies.html">Politicas de Cookies</a><a href="aviso_legal.html">Avisos Legales</a>
+        <p>&copy;2024 | All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <div id="modal-cookies" class="modal">
+        <div class="modal-contenido">
+            <h3>Política de Cookies</h3>
+            <p>Este sitio web utiliza cookies para mejorar su experiencia. Por favor, acepte o rechace el uso de cookies.</p>
+            <button id="aceptar-cookies">Aceptar</button>
+            <button id="rechazar-cookies">Rechazar</button>
+        </div>
+    </div>
+    
+    <script src="cookies.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carrusel = document.querySelector('.carrusel');
+            const imagenes = document.querySelectorAll('.carrusel img');
+            const btnAnterior = document.querySelector('.btn-anterior');
+            const btnSiguiente = document.querySelector('.btn-siguiente');
+        
+            let index = 0;
+            const totalImagenes = imagenes.length;
+        
+            function actualizarTransform() {
+            carrusel.style.transform = `translateX(${-index * 100}%)`;
+            }
+        
+            function siguienteImagen() {
+            if (index < totalImagenes - 1) {
+                index++;
+                actualizarTransform();
+            }
+            if (index === totalImagenes - 1) {
+                // Desactivar el botón de siguiente después de mostrar todas las imágenes
+                // btnSiguiente.disabled = true;
+            }
+            // Reactivar el botón de anterior
+            btnAnterior.disabled = false;
+            }
+        
+            function anteriorImagen() {
+            index = (index - 1 + totalImagenes) % totalImagenes;
+            actualizarTransform();
+        
+            if (index === 0) {
+                // Desactivar el botón de anterior al llegar a la primera imagen
+                // btnAnterior.disabled = true;
+            }
+            // Reactivar el botón de siguiente
+            btnSiguiente.disabled = false;
+            }
+        
+            btnSiguiente.addEventListener('click', siguienteImagen);
+            btnAnterior.addEventListener('click', anteriorImagen);
+        
+            // Desactivar el botón de anterior al cargar la página
+            btnAnterior.disabled = true;
+        });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});
+      </script>
+</body>
+</html>

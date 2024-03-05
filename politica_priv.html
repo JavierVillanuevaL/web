@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Politicas de privacidad</title>
+    <style>
+        body{
+            background-color: rgb(215, 222, 251);
+            box-sizing: border-box;
+        }
+        .cab{
+            width: 100%;
+            height: 100px;
+            border: 1px solid gray;
+            background: #3586ff;
+
+        }
+        .navv{
+            border: 2px solid black;
+            width: 100%;
+            height: 50px;
+            background-color:rgb(23, 23, 22);
+            font-weight: bold;
+            text-align: center;
+        }
+        .navv a{
+            text-decoration: none;
+            /* margin-left: 190px; */
+        }
+        .navv a:hover{
+            padding: 10px;
+            color: white;
+            background: #3586ff;
+        }
+        .nav-item-dropdown{
+            /* margin: 12px; */
+            margin-left: 12%;
+            padding-top: 10px;
+            padding-bottom: 25px;
+            margin-right: 10%;
+            text-align: center;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+        .footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 130px;
+        padding: 40px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 170px;
+        text-decoration: none;
+        }
+
+        .social-icon,
+        .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+        }
+
+        .social-icon__item,
+        .menu__item {
+        list-style: none;
+        }
+
+        .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        }
+        .social-icon__link:hover {
+        transform: translateY(-10px);
+        }
+
+        .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+        }
+
+        .menu__link:hover {
+        opacity: 1;
+        }
+
+        .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+        }
+        .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+        }
+
+        footer a{
+            color: white;
+            font-size: 18px;
+        }
+
+        .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+        }
+
+        .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+        }
+
+        .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+        }
+
+        .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+        }
+
+        .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+        }
+
+        @keyframes animateWaves {
+        0% {
+            background-position-x: 1000px;
+        }
+        100% {
+            background-positon-x: 0px;
+        }
+        }
+
+        @keyframes animate {
+        0% {
+            background-position-x: -1000px;
+        }
+        100% {
+            background-positon-x: 0px;
+        }
+        }
+    </style>
+</head>
+<body >
+    <header>
+        <div class="cab">
+            <a href="index.html"><img src="imagenes/logo.jpg" width="80px" align="left" style="margin-left: 20px; margin-top: 10px;"></a>
+            
+            <form align="right" style="margin-top: 2%;">
+                <input type="search" placeholder="Buscar">
+                <button type="submit"><img src="imagenes/lupa.jpg" width="40px"></button>
+                <button class="carr"><a href=""><img src="imagenes/carrito.jpg" width="36px"></a></button></form>
+        </div>
+    </header>
+
+    <nav class="navv">
+        <ul class="nav nav-tabs" id="menu">
+            <li class="nav-item-dropdown">
+                <a class="nav-link-dropdown-toggle" data-toggle="dropdown" href="">VIDEOJUEGOS | CONSOLAS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pagina play4.html">Playstation 4</a>
+                    <a class="dropdown-item" href="pagina play5.html">Playstation 5</a>
+                    <a class="dropdown-item" href="pagina xbox.html">Xbox series X</a>
+                    <a class="dropdown-item" href="pagina nintendo.html">Nintendo Switch</a>
+                </div>
+            </li>
+            <li class="nav-item-dropdown">
+                <a class="nav-link-dropdown-toggle" data-toggle="dropdown" href="">ACCESORIOS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pagina accesorios play4.html">PlayStation 4</a>
+                    <a class="dropdown-item" href="pagina accesorios play5.html">Playstation 5</a>
+                    <a class="dropdown-item" href="pagina accesorios xbox.html">Xbox</a>
+                    <a class="dropdown-item" href="pagina accesorios nintendo.html">Nintendo</a>
+                </div>
+            </li>
+            <li class="nav-item-dropdown">
+                <a class="nav-link-dropdown-toggle" href="pagina digital.html">DIGITAL</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main style="margin: 40px;">
+        <h1>Política de Privacidad</h1>
+
+        <p>Última actualización: [Fecha]</p>
+
+        <p>[Nombre de la empresa] ("nosotros", "nuestro" o "nosotros") se compromete a proteger la privacidad de sus usuarios. Esta Política de Privacidad describe cómo recopilamos, utilizamos y compartimos la información personal que obtenemos a través de nuestro sitio web [nombre del sitio web] ("el Sitio").</p>
+
+        <h2>1. Información que recopilamos</h2>
+
+        <p>Podemos recopilar información personal identificable de los usuarios de diversas maneras, incluyendo, pero no limitándose a, cuando los usuarios visitan nuestro sitio, se registran en el sitio, realizan un pedido, responden a una encuesta, llenan un formulario y en relación con otras actividades, servicios, características o recursos que ponemos a disposición en nuestro sitio. Los usuarios pueden ser solicitados, según corresponda, nombre, dirección de correo electrónico, dirección postal, número de teléfono y detalles de la tarjeta de crédito. Sin embargo, los usuarios pueden visitar nuestro sitio de forma anónima. Recopilaremos información personal identificable de los usuarios solo si la envían voluntariamente a nosotros. Los usuarios siempre pueden negarse a proporcionar información de identificación personal, excepto que puede evitar que participen en ciertas actividades relacionadas con el sitio.</p>
+
+        <h2>2. Uso de la información recopilada</h2>
+
+        <p>Podemos recopilar y utilizar información personal de los usuarios para los siguientes propósitos:
+
+            <ul>
+                <li>- Para mejorar nuestro sitio: podemos utilizar la retroalimentación que nos proporcionan para mejorar nuestros productos y servicios.</li>
+                <li>- Para procesar pagos: podemos utilizar la información que los usuarios proporcionan sobre sí mismos al realizar un pedido solo para proporcionar servicio a ese pedido. No compartimos esta información con terceros, excepto en la medida necesaria para proporcionar el servicio.</li>
+                <li>- Para enviar correos electrónicos periódicos: podemos utilizar la dirección de correo electrónico para enviar información del usuario y actualizaciones relacionadas con su pedido. También puede ser utilizado para responder a sus consultas, preguntas y/u otras solicitudes.</li>
+            </ul>
+        </p>
+
+        <h2>3. Protección de la información del usuario</h2>
+
+        <p>Adoptamos prácticas adecuadas de recopilación, almacenamiento y procesamiento de datos y medidas de seguridad para proteger contra el acceso no autorizado, alteración, divulgación o destrucción de su información personal, nombre de usuario, contraseña, información de transacciones y datos almacenados en nuestro sitio.</p>
+
+        <h2>4. Compartir su información personal</h2>
+
+        <p>No vendemos, comercializamos ni alquilamos información de identificación personal de los usuarios a terceros. Podemos compartir información demográfica agregada genérica no vinculada a ninguna información de identificación personal sobre visitantes y usuarios con nuestros socios comerciales, afiliados confiables y anunciantes para los fines descritos anteriormente.</p>
+
+        <h2>5. Cambios en esta política de privacidad</h2>
+
+        <p>[Nombre de la empresa] tiene la discreción de actualizar esta política de privacidad en cualquier momento. Al hacerlo, revisaremos la fecha de actualización en la parte inferior de esta página. Alentamos a los usuarios a revisar esta página con frecuencia para obtener cualquier cambio y mantenerse informados sobre cómo estamos ayudando a proteger la información personal que recopilamos. Usted reconoce y acepta que es su responsabilidad revisar esta política de privacidad periódicamente y tomar conciencia de las modificaciones.</p>
+
+        <h2>6. Su aceptación de estos términos</h2>
+
+        <p>Al utilizar este sitio, usted expresa su aceptación de esta política. Si no está de acuerdo con esta política, por favor no use nuestro sitio. Su uso continuado del sitio después de la publicación de cambios en esta política se considerará su aceptación de dichos cambios.</p>
+
+        <h2>7. Contacto con nosotros</h2>
+
+        <p>Si tiene alguna pregunta sobre esta Política de Privacidad, las prácticas de este sitio, o sus relaciones con este sitio, por favor contáctenos en:
+
+        [Nombre de la empresa]
+        [Dirección postal]
+        [Teléfono]
+        [Correo electrónico]</p>
+    </main>
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="index.html">Inicio</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Sobre mi</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Servicios</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
+        </ul>
+        <a href="politica_priv.html">Politicas de Privacidad</a><a href="politica_cookies.html">Politicas de Cookies</a><a href="aviso_legal.html">Avisos Legales</a>
+        <p>&copy;2024 | All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
