@@ -3,7 +3,7 @@
           
     <?php
     $name = $_POST['name'];
-    $apel = $_POST['apel'];
+
     $mail = $_POST['mail'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
@@ -14,7 +14,7 @@
     $header .= "Content-Type: text/plain";
     
     $message = "Este mensaje fue enviado por: " . $name . " \r\n";
-    $message = "Su apellido: " . $apel . " \r\n";
+
     $message .= "Su e-mail es: " . $mail . " \r\n";
     $message .= "Teléfono de contacto: " . $phone . " \r\n";
     $message .= "Mensaje: " . $_POST['message'] . " \r\n";
@@ -25,5 +25,5 @@
     
     mail($para, $asunto, utf8_decode($message), $header);
     
-    header("index.html");
+    header("Location:index.html");
     ?>

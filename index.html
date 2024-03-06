@@ -578,8 +578,8 @@
                     Comprar:
                     <b>69.99€</b></a>
                 </div>
-                <div class="ps5"><a href="https://www.game.es/the-last-of-us-parte-ii-remastered-playstation-5-226221">
-                    <img class="imagen" src="imagenes/tlou2rem.jpg">
+                <div class="ps5"><a href="">
+                    <img class="imagen" src="">
                     <h4>The last of us Parte 2 Remastered</h4>
                     Comprar:
                     <b>49.99€</b></a>
@@ -657,7 +657,7 @@
         <br>
         <a href="pagina xbox.html" style="margin-left: 25px; padding: 10px;"><img src="https://media.game.es/CMS/Banners/Small/mult-GAMEmasquevideojuegos-xboxseries-s3023-p.jpg" width="30%"></a></ul>
 
-        <form action="enviar.php" method="POST" style="margin: 70px; width: 40%;">
+        <form action="enviar.php" method="POST" style="margin: 70px; width: 40%;" onsubmit="return enviarFormulario()">
             <fieldset style="border: 2px solid black; padding: 50px;">
                 <legend>Datos Personales</legend>
                 <label for="name">Nombre: </label><input type="text" name="name"><br>
@@ -718,6 +718,13 @@
     
     <script src="cookies.js"></script>
     <script>
+        function enviarFormulario(){
+            window.location.href='index.html';
+            return false;
+        }
+
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const carrusel = document.querySelector('.carrusel');
             const imagenes = document.querySelectorAll('.carrusel img');
